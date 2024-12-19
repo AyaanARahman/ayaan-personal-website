@@ -148,3 +148,23 @@ table {
 .title {
   text-wrap: balance;
 }
+
+.title-color{
+  color: #ee6c4d;
+}
+/* custom colors**/
+.bg-page-color{
+  background-color: #edede9;
+}
+
+.p-font-color{
+  color: #001524;
+}
+
+.tech-font-color{
+  color: #2a9d8f;
+}
+
+.font-size_small{
+  font-size: small;
+}
