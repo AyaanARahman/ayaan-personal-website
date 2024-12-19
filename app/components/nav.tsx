@@ -25,16 +25,16 @@ export function Navbar() {
         >
           <h1 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">Ayaan Rahman</h1>
           <div className="flex flex-row space-x-4">
-            <Link href="/" className="hover:text-neutral-800 dark:hover:text-neutral-200">
+            <Link href="/" className="nav-link">
               Home
             </Link>
-            <Link href="/projects" className="hover:text-neutral-800 dark:hover:text-neutral-200">
+            <Link href="/projects" className="nav-link">
               Projects
             </Link>
-            <Link href="/resume" className="hover:text-neutral-800 dark:hover:text-neutral-200">
+            <Link href="/resume" className="nav-link">
               Resume
             </Link>
-            <Link href="/transcript" className="hover:text-neutral-800 dark:hover:text-neutral-200">
+            <Link href="/transcript" className="nav-link">
               Transcript
             </Link>
           </div>

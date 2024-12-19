@@ -168,3 +168,20 @@ table {
 .font-size_small{
   font-size: small;
 }
+
+/* Navbar Link Styles */
+.nav-link {
+  color: #2a9d8f; /* Default color */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.nav-link:hover {
+  color: #ee6c4d; /* Change color on hover (light mode) */
+  font-size: 1.1rem; /* Slightly increase font size */
+  font-weight: 600; /* Make font bold */
+}
+
+.dark .nav-link:hover {
+  color: #ffffff; /* Change color on hover (dark mode) */
+}
