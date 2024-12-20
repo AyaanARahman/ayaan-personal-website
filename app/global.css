@@ -217,3 +217,22 @@ table {
   background-color: #001524; /* Page background color for dark mode */
   color: #ffffff; /* Default text color for dark mode */
 }
+
+a.custom-link {
+  color: #001524;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+a.custom-link:hover {
+  background-color: #4a5568;
+  color: #ffffff /* Light mode hover background color */
+}
+
+.dark a.custom-link{
+  color: #ffffff;
+}
+
+.dark a.custom-link:hover {
+  background-color: #4a5568; /* Light mode hover background color */
+}
