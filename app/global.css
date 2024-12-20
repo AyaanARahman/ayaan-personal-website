@@ -152,13 +152,27 @@ table {
 .title-color{
   color: #ee6c4d;
 }
+
+.dark .title-color{
+  color: #2a9d8f;
+}
 /* custom colors**/
 .bg-page-color{
   background-color: #edede9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .bg-page-color {
+  background-color: #1a1a1a; /* Dark mode */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .p-font-color{
   color: #001524;
+}
+
+.dark .p-font-color{
+  color: #edede9;
 }
 
 .tech-font-color{
@@ -175,6 +189,9 @@ table {
   text-decoration: none;
   transition: all 0.3s ease-in-out; /* Smooth transition */
 }
+.dark .nav-link {
+  color: #ee6c4d; /* Default color */
+}
 
 .nav-link:hover {
   color: #ee6c4d; /* Change color on hover (light mode) */
@@ -183,5 +200,20 @@ table {
 }
 
 .dark .nav-link:hover {
-  color: #ffffff; /* Change color on hover (dark mode) */
+  color: #2a9d8f; /* Change color on hover (dark mode) */
+}
+
+.name{
+  color: #001524;
+}
+
+.dark .name{
+  color:#edede9;
+}
+
+
+/* Dark Mode Styles */
+.dark {
+  background-color: #001524; /* Page background color for dark mode */
+  color: #ffffff; /* Default text color for dark mode */
 }
