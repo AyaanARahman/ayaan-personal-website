@@ -2,20 +2,6 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-const navItems = {
-  '/': {
-    name: 'home',
-  },
-  '/projects': {
-    name: 'projects',
-  },
-  '/resume': {
-    name: 'resume',
-  },
-  '/transcript': {
-    name: 'transcript',
-  },
-}
 
 export function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -49,15 +35,15 @@ export function Navbar() {
           <h1 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 name">Ayaan Rahman</h1>
           <div className="flex flex-row space-x-4">
             <Link href="/" className="nav-link">
-              Home
+              About
             </Link>
             <Link href="/projects" className="nav-link">
               Projects
             </Link>
-            <Link href="/resume" className="nav-link">
+            <Link href="/resume.pdf" className="nav-link">
               Resume
             </Link>
-            <Link href="/transcript" className="nav-link">
+            <Link href="/transcript.pdf" className="nav-link">
               Transcript
             </Link>
 
