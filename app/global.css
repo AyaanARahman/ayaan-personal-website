@@ -185,22 +185,22 @@ table {
 
 /* Navbar Link Styles */
 .nav-link {
-  color: #2a9d8f; /* Default color */
+  color: #2a9d8f; 
   text-decoration: none;
-  transition: all 0.3s ease-in-out; /* Smooth transition */
+  transition: all 0.3s ease-in-out; 
 }
 .dark .nav-link {
-  color: #ee6c4d; /* Default color */
+  color: #ee6c4d; 
 }
 
 .nav-link:hover {
-  color: #ee6c4d; /* Change color on hover (light mode) */
-  font-size: 1.1rem; /* Slightly increase font size */
-  font-weight: 600; /* Make font bold */
+  color: #ee6c4d;
+  font-size: 1.1rem;
+  font-weight: 600; 
 }
 
 .dark .nav-link:hover {
-  color: #2a9d8f; /* Change color on hover (dark mode) */
+  color: #2a9d8f;
 }
 
 .name{
@@ -211,11 +211,15 @@ table {
   color:#edede9;
 }
 
+.clicker{
+  cursor: pointer;
+}
+
 
 /* Dark Mode Styles */
 .dark {
-  background-color: #001524; /* Page background color for dark mode */
-  color: #ffffff; /* Default text color for dark mode */
+  background-color: #001524; 
+  color: #ffffff;
 }
 
 a.custom-link {
@@ -226,7 +230,7 @@ a.custom-link {
 
 a.custom-link:hover {
   background-color: #4a5568;
-  color: #ffffff /* Light mode hover background color */
+  color: #ffffff 
 }
 
 .dark a.custom-link{
@@ -234,5 +238,37 @@ a.custom-link:hover {
 }
 
 .dark a.custom-link:hover {
-  background-color: #4a5568; /* Light mode hover background color */
+  background-color: #4a5568;
+}
+
+footer a {
+  color: #6b7280; 
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ee6c4d;
+}
+
+/* Footer Links (Dark Mode) */
+.dark footer a {
+  color: #d1d5db; 
+}
+
+.dark footer a:hover {
+  color: #2a9d8f;
+}
+
+/* Footer Arrow Icon */
+footer svg {
+  fill: currentColor; 
+}
+
+/* Footer Text */
+footer p {
+  color: #6b7280; 
+}
+
+.dark footer p {
+  color: #d1d5db; 
 }

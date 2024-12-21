@@ -47,7 +47,7 @@ export function Navbar() {
               Transcript
             </Link>
 
-            <button onClick={toggleDarkMode} className="ml-4 px-2 py-1 text-sm font-semibold dark:bg-gray-800 rounded">
+            <button onClick={toggleDarkMode} className="ml-4 px-2 clicker py-1 text-sm font-semibold dark:bg-gray-800 rounded">
               {isDarkMode ? 'Light Mode' : 'Dark Mode'}
             </button>
           </div>
