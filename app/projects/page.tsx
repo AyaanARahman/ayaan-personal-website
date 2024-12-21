@@ -70,7 +70,7 @@ export default function Page() {
       </h1>
       <p className='mb-4 tech-font-color font-size_small'>
         <i>
-        Technologies: React Native, Firebase, Google Cloud Platform
+        Technologies: OpenAI API, Langchain, Pinecone, Next.js
         </i>
       </p>
 
