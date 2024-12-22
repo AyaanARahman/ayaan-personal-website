@@ -55,7 +55,7 @@ export function Navbar() {
             {/* Dark Mode Button */}
             <button
               onClick={toggleDarkMode}
-              className="px-3 py-1 text-sm sm:text-base font-semibold dark:bg-gray-800 bg-gray-100 text-black dark:text-white rounded"
+              className="px-3 py-1 clicker text-sm font-semibold dark:bg-gray-800 rounded text-center"
             >
               {isDarkMode ? "Light Mode" : "Dark Mode"}
             </button>
