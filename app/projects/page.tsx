@@ -32,7 +32,7 @@ export default function Page() {
           View Deployed Site
         </a>
         <a
-          href="https://github.com/uva-cs3240-f24/project-b-12"
+          href="https://github.com/AyaanARahman/EventEase"
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 rounded-md font-size_small custom-link"
