@@ -27,7 +27,7 @@ export function Navbar() {
     <aside className="mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
         <nav
-          className="flex flex-wrap items-center justify-between px-4 py-2 dark:bg-neutral-900"
+          className="flex flex-wrap items-center justify-between px-4 py-2 "
           id="nav"
         >
           {/* Name (centered on small screens) */}
