@@ -19,7 +19,7 @@ export default function Page() {
   </div>
 </div>
 
- <p className="mb-4 p-font-color">
+<p className="mb-4 p-font-color">
   {`Hi! I’m Ayaan Rahman, a software and solutions engineer who works at the intersection of code, systems, and customer-facing problem solving. I have hands-on experience diagnosing, debugging, and stabilizing production environments, and I enjoy turning ambiguous technical issues into reliable, scalable solutions. My background spans full-stack development, cloud-native systems, and enterprise platforms, using Java, Python, JavaScript, and modern web frameworks.`}
 </p>
 
@@ -28,7 +28,7 @@ export default function Page() {
 </p>
 
 <p className="mb-4 p-font-color">
-  {`Previously at Navy Federal Credit Union, I shipped reusable Adobe Experience Manager components used by teams across the organization, improving accessibility, performance, and authoring efficiency. I also resolved security and code-quality issues flagged by tools like SonarQube, BlackDuck, and Checkmarx, reinforcing my focus on production readiness and long-term maintainability.`}
+  {`Previously at Navy Federal Credit Union, I shipped reusable Adobe Experience Manager components used by teams across the organization, improving accessibility, performance, and authoring efficiency by utilizing javascript, java, HTL, Sass, and XML. I also resolved security and code-quality issues flagged by tools like SonarQube, BlackDuck, and Checkmarx, reinforcing my focus on production readiness and long-term maintainability.`}
 </p>
 
 <p className="mb-4 p-font-color">
