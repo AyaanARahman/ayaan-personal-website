@@ -50,8 +50,6 @@ Route (app)                    Size     First Load JS
 
 **Accessibility as a default, not a pass.** Visible `:focus-visible` rings on every interactive element, `aria-label`s on icon-only controls, semantic landmarks, and a full `prefers-reduced-motion` block that collapses every animation and transition.
 
-**SEO handled at the framework level.** Typed `Metadata` exports, Open Graph and Twitter cards, a generated `sitemap.xml` and `robots.txt`, an RSS feed, and dynamic OG images rendered at the edge with `next/og`.
-
 ---
 
 ## Tech stack
@@ -66,32 +64,6 @@ Route (app)                    Size     First Load JS
 | Syntax highlighting | `sugar-high` | ~1 kB, no runtime grammar loading |
 | Analytics | Vercel Analytics + Speed Insights | Real-user Core Web Vitals |
 | Hosting | Vercel | Zero-config CI/CD from `main` |
-
----
-
-## Getting started
-
-**Requirements:** Node.js 18.17+ (developed on 24.4.1) and npm.
-
-```bash
-git clone https://github.com/AyaanARahman/ayaan-personal-website.git
-cd ayaan-personal-website
-npm install
-npm run dev
-```
-
-Open [localhost:3000](http://localhost:3000).
-
-### Scripts
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Dev server with hot reload |
-| `npm run build` | Production build to `.next/` |
-| `npm start` | Serve the production build |
-
-> [!IMPORTANT]
-> `next dev` and `next build` share the same `.next/` directory and **will corrupt each other's output** if run concurrently — producing confusing `MODULE_NOT_FOUND` and `Cannot find module './vendor-chunks/…'` errors that look like code bugs but aren't. Stop the dev server before building. If you hit it: `rm -rf .next` and rebuild.
 
 ---
 
@@ -129,36 +101,9 @@ Page content lives in typed arrays at the top of each page component (`experienc
 
 ---
 
-## Writing a post
-
-Drop a `.mdx` file into `app/blog/posts/` with frontmatter:
-
-```mdx
----
-title: 'Your Post Title'
-publishedAt: '2026-01-15'
-summary: 'A one-line summary used for previews and metadata.'
----
-
-Your content here. Standard MDX — components work inline.
-```
-
-`title`, `publishedAt`, and `summary` are required; `image` is optional. The slug is the filename, and routing, the index listing, the sitemap entry, and the RSS item are all generated from the filesystem. No registration step.
-
----
-
 ## Deployment
 
 Pushes to `main` deploy automatically via Vercel.
-
-> [!NOTE]
-> This project standardizes on **npm**. Keep exactly one lockfile committed — `package-lock.json`. Vercel prefers pnpm whenever a `pnpm-lock.yaml` is present, so a stray second lockfile silently overrides your dependency versions at build time and can reintroduce vulnerabilities you already patched.
-
----
-
-## License
-
-MIT © Ayaan Rahman
 
 ---
 
