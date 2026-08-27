@@ -1,95 +1,135 @@
-import { BlogPosts } from 'app/components/posts'
-import Image from 'next/image'
+import type { Metadata } from 'next';
 
-//UPDATE AND ADD ALL RELEVANT PROJECTS WITH SOURCE CODE LINKS
+export const metadata: Metadata = {
+  title: 'Projects',
+  description:
+    'Full-stack and cloud projects built by Ayaan Rahman — event planning platforms, mobile ride-sharing, and AI-powered semantic search.',
+};
+
+type Project = {
+  name: string;
+  tagline: string;
+  description: string;
+  tech: string[];
+  links: { label: string; href: string }[];
+};
+
+const projects: Project[] = [
+  {
+    name: 'EventEase',
+    tagline: 'Full-stack event planning, deployed to the cloud',
+    description:
+      'A cloud-hosted event planning platform built with Django and PostgreSQL. It handles Google OAuth authentication, role-based access control, S3-backed file uploads, automated email reminders, and Google Calendar integration — all behind a Bootstrap interface and deployed on Heroku.',
+    tech: [
+      'Python',
+      'Django',
+      'PostgreSQL',
+      'AWS S3',
+      'GCP',
+      'Heroku',
+      'Google OAuth',
+    ],
+    links: [
+      {
+        label: 'Live site',
+        href: 'https://project-b12-2024-4a4dbf0dbe13.herokuapp.com/',
+      },
+      { label: 'Source', href: 'https://github.com/AyaanARahman/EventEase' },
+    ],
+  },
+  {
+    name: 'HooRides',
+    tagline: 'Ride-sharing for 24,000+ UVA students',
+    description:
+      'A cross-platform mobile app built with React Native and Firebase for secure ride-sharing inside the UVA community. I led an Agile Scrum team of three developers, building real-time data sync, Google Maps navigation, and UVA-only authentication. The platform enabled 1,000+ miles of rides across Central Virginia and was presented to 10+ faculty and stakeholders.',
+    tech: ['React Native', 'Firebase', 'GCP', 'Google Maps API'],
+    links: [
+      { label: 'Source', href: 'https://github.com/UVA-Rideshare/rideshare' },
+    ],
+  },
+  {
+    name: 'Semantic Search',
+    tagline: 'Context-aware search over vector embeddings',
+    description:
+      'A semantic search tool combining the OpenAI API, LangChain, and the Pinecone vector database to return results by meaning rather than keyword match. Vector-based indexing and natural language understanding pushed query accuracy to 95%, wrapped in a Next.js front end.',
+    tech: ['Next.js', 'OpenAI API', 'LangChain', 'Pinecone'],
+    links: [
+      {
+        label: 'Source',
+        href: 'https://github.com/AyaanARahman/Ayaan-Semantic-Search',
+      },
+    ],
+  },
+];
+
+function ArrowIcon() {
+  return (
+    <svg
+      width="11"
+      height="11"
+      viewBox="0 0 12 12"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="mb-4 text-2xl font-semibold tracking-tighter title-color">
-        EventEase
+    <section className="pb-4">
+      <h1 className="title text-3xl font-semibold tracking-tight text-primary">
+        Projects
       </h1>
-
-      <p className='mb-4 tech-font-color font-size_small'>
-        <i>
-        Technologies: Python, Django, PostgreSQL, Amazon S3, Heroku, Google OAuth, Bootstrap
-        </i>
+      <p className="lede mt-3">
+        Things I built end to end — from the data model to the deploy. Each one
+        started as a problem I actually wanted solved.
       </p>
 
-      <p className="mb-6 p-font-color">
-        {`EventEase is a web application for seamless event management and collaboration. It features Google OAuth authentication, 
-        role-based access, file uploads via Amazon S3, automated email reminders, and Google Calendar integration. With a modern 
-        Bootstrap interface and robust backend powered by PostgreSQL, the application is fully deployed on Heroku, demonstrating 
-        expertise in full-stack development and cloud integration.`}
-      </p>
+      <div className="mt-10 space-y-5">
+        {projects.map((project) => (
+          <article
+            key={project.name}
+            className="card card-interactive px-5 py-5"
+          >
+            <h2 className="text-lg font-semibold tracking-tight text-primary">
+              {project.name}
+            </h2>
+            <p className="mt-0.5 text-sm text-accent">{project.tagline}</p>
 
-      <a
-          href="https://project-b12-2024-4a4dbf0dbe13.herokuapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 rounded-md font-size_small custom-link"
-        >
-          View Deployed Site
-        </a>
-        <a
-          href="https://github.com/AyaanARahman/EventEase"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 rounded-md font-size_small custom-link"
-        >
-          View Source Code
-        </a>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              {project.description}
+            </p>
 
-      <h1 className="mt-6 mb-4 text-2xl font-semibold tracking-tighter title-color">
-        HooRides
-      </h1>
-      <p className='mb-4 tech-font-color font-size_small'>
-        <i>
-        Technologies: React Native, Firebase, Google Cloud Platform
-        </i>
-      </p>
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {project.tech.map((t) => (
+                <span key={t} className="chip">
+                  {t}
+                </span>
+              ))}
+            </div>
 
-      <p className="mb-8 p-font-color">
-        {`The UVA Carpooling App is a mobile application built with React Native, Firebase, and the Google Maps API 
-        to serve 24,000+ University of Virginia students. It streamlines campus mobility by enabling secure, 
-        efficient carpooling through real-time data synchronization, precise navigation, and UVA-only authentication. 
-        Designed to foster a community-driven transportation network, the app enhances campus safety and promotes 
-        sustainability by encouraging ride-sharing and reducing carbon footprints.`}
-      </p>
-      <a
-          href="https://github.com/UVA-Rideshare/rideshare"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 rounded-md font-size_small custom-link"
-        >
-          View Source Code
-        </a>
-
-        <h1 className="mt-6 mb-4 text-2xl font-semibold tracking-tighter title-color">
-        Semantic Search Application
-      </h1>
-      <p className='mb-4 tech-font-color font-size_small'>
-        <i>
-        Technologies: OpenAI API, Langchain, Pinecone, Next.js
-        </i>
-      </p>
-
-      <p className="mb-8 p-font-color">
-        {`The Semantic Search Application is a cutting-edge tool built with OpenAI API, LangChain, Next.js, 
-        and the Pinecone vector database to deliver highly accurate and context-aware search results. 
-        Leveraging advanced natural language understanding and vector-based indexing, the application 
-        achieved 95% accuracy in processing user queries. This innovative project showcases a seamless integration 
-        of AI-powered search capabilities and optimized performance for retrieving semantically relevant content with speed and precision.`}
-      </p>
-      <a
-          href="https://github.com/AyaanARahman/Ayaan-Semantic-Search"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 rounded-md font-size_small custom-link"
-        >
-          View Source Code
-        </a>
-
+            <div className="mt-5 flex flex-wrap gap-2">
+              {project.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-ghost"
+                >
+                  {link.label}
+                  <ArrowIcon />
+                </a>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
-  )
+  );
 }
