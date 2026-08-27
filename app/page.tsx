@@ -124,7 +124,7 @@ export default function Page() {
       {/* ---------- Intro ---------- */}
       <div className="mt-12 space-y-5">
         <p className="lede">
-          Hi! I&apos;m Ayaan — a software and solution engineer who lives where
+          Hi! I&apos;m Ayaan, software and solution engineer who lives where
           distributed systems meet the people actually depending on them. I spend
           my days inside Linux, AWS, and Kubernetes environments, turning
           ambiguous &ldquo;something is broken&rdquo; reports into root causes,
