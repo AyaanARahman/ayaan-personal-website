@@ -15,10 +15,10 @@ const experience = [
     period: 'Jul 2025 — Present',
     current: true,
     points: [
-      'Designed, built, and own an end-to-end multi-repository GitLab CI/CD pipeline used by 150+ engineers — JavaScript stages compile tooling definitions into structured Markdown, publish versioned artifacts to the GitLab Package Registry, and trigger a downstream Docusaurus build, removing a second approval step across 100+ contributions in six months.',
+      'Designed, built, and own an end-to-end multi-repository GitLab CI/CD pipeline used by 150+ engineers. JavaScript stages compile tooling definitions into structured Markdown, publish versioned artifacts to the GitLab Package Registry, and trigger a downstream Docusaurus build, removing a second approval step across 100+ contributions in six months.',
       'Resolved 500+ incident tickets across production, staging, and development Linux environments on AWS and Kubernetes, including response for 30+ P1 outages and the root-cause analysis that made the fixes permanent.',
       'Automated rolling restarts of application servers with Python and Bash, turning a 1.5+ hour hands-on procedure into a single-click operation.',
-      'Built self-service diagnostic runbooks that connect to customer environments, run Linux command sequences, and return structured findings — cutting investigation time 20–30% across AWS (EC2, IAM, EKS) and Kubernetes.',
+      'Built self-service diagnostic runbooks that connect to customer environments, run Linux command sequences, and return structured findings, cutting investigation time by 20–30% across AWS (EC2, IAM, EKS) and Kubernetes.',
     ],
     tech: ['Linux', 'AWS', 'Kubernetes', 'GitLab CI/CD', 'Python', 'Bash'],
   },
@@ -39,7 +39,7 @@ const experience = [
     location: 'Charlottesville, VA',
     period: 'Jan 2024 — May 2024',
     points: [
-      'Held weekly office hours for 30+ students on CPU architecture, x86 assembly, memory management, and Linux networking — the fundamentals I now use every day.',
+      'Held weekly office hours for 30+ students on CPU architecture, x86 assembly, memory management, and Linux networking, the fundamentals I now use every day.',
     ],
     tech: ['x86 Assembly', 'C', 'Linux'],
   },
@@ -137,7 +137,7 @@ export default function Page() {
           incident response at real stakes: 500+ tickets across production,
           staging, and development, including 30+ P1 outages where the fix and the
           follow-up root-cause analysis both mattered. The parts I enjoy most are
-          the ones that outlive the ticket — a CI/CD pipeline that 150+ engineers
+          the ones that outlive the ticket: a CI/CD pipeline that 150+ engineers
           publish through, diagnostic runbooks that cut investigation time by
           20–30%, and a rolling-restart procedure I turned from a 1.5-hour manual
           slog into one click.
@@ -161,7 +161,7 @@ export default function Page() {
         <p className="lede">
           Away from a terminal, I&apos;m usually on a pickleball court chasing a
           tournament bracket, composing music, or cooking something ambitious for
-          friends and family. Curiosity and ownership are the through-line —
+          friends and family. Curiosity and ownership are the through-line, whether it's a 2 a.m. outage or a recipe I've never attempted.
           whether it&apos;s a 2 a.m. outage or a recipe I&apos;ve never attempted.
         </p>
       </div>
