@@ -98,7 +98,7 @@ export default function Page() {
             D.C. area
           </p>
           <p className="mt-1 text-sm text-subtle">
-            I keep production systems standing up — and automate the parts that
+            I keep production systems standing up and automate the parts that don't need a human.
             shouldn&apos;t need a human.
           </p>
 
